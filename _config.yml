@@ -1,0 +1,6 @@
+safe: true
+lsi: false
+pygments: true
+paginate: 2
+paginate_path: 'blog/:num'
+exclude: ['Dockerfile', 'Gemfile', 'Gemfile.lock', 'README.md', 'run.sh']

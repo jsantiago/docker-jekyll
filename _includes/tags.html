@@ -1,0 +1,8 @@
+{% if include.tags != empty %}
+    <div class="tags">
+        Tagged as:
+        {% for tag in include.tags %}
+        <a href="/tags/#{{ tag }}" class="label label-primary">{{ tag }}</a>
+        {% endfor %}
+    </div>
+{% endif %}

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+<div class="row">
+    <div class="col-md-12">
+        <article>
+            <header>
+                <h1>{{ page.title }}</h1>
+            </header>
+            {{ content }}
+        </article>
+        <footer>
+            <p>Posted on: {{ page.date | date:"%B %d, %Y" }}</p>
+            {% include tags.html tags=page.tags %}
+        </footer>
+    </div>
+</div>

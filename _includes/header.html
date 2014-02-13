@@ -1,0 +1,14 @@
+<header class="navbar navbar-static-top">
+    <div class="container">
+        <nav class="collapse navbar-collapse">
+            <ul class="nav nav-tabs">
+                {% for nav in site.data.pages %}
+                <li><a href="{{ nav.url }}">{{ nav.title }}</a></li>
+                {% endfor %}
+                {% if site.tags %}
+                <li><a href="/tags/">Tags</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</header>

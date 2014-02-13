@@ -1,0 +1,13 @@
+---
+layout: default
+title: Tags
+---
+{% for posts in site.tags %}
+    {% assign tag = posts.first %}
+    <div class="list-group">
+        <a name="{{ tag }}" class="list-group-item {% cycle 'list-group-item-success', 'list-group-item-info', 'list-group-item-warning', 'list-group-item-danger' %}">{{ tag | capitalize }}</a>
+        {% for post in site.tags[tag] %}
+            <a class="list-group-item" href="{{ post.url }}">{{ post.title }}</a>
+        {% endfor %}
+    </div>
+{% endfor %}
