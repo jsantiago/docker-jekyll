@@ -6,8 +6,8 @@ RUN gem install rubygems-update
 RUN update_rubygems
 RUN gem install bundler
 
-RUN mkdir -p /home/jekyll
-WORKDIR /home/jekyll
-ADD Gemfile /home/jekyll/Gemfile
+RUN mkdir -p /opt/jekyll
+WORKDIR /opt/jekyll
+ADD Gemfile /opt/jekyll/
 RUN bundle install
 CMD bundle exec jekyll serve
