@@ -9,5 +9,6 @@ RUN gem install bundler
 RUN mkdir -p /opt/jekyll
 WORKDIR /opt/jekyll
 ADD Gemfile /opt/jekyll/
+ADD Gemfile.lock /opt/jekyll/
 RUN bundle install
 CMD bundle exec jekyll serve
